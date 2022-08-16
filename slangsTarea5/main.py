@@ -77,9 +77,9 @@ def addSlang():
         definicion = request.form["meaning"]
         if not checkExists(palabra):
             addPalabraDef(palabra, definicion)
-            return render_template("index.html", message="!!Palabra añadida :)")
+            return render_template("index.html", message="Palabra agregada")
         else:
-            return render_template("index.html", message="!!La palabra ya existe :(")
+            return render_template("index.html", message="La palabra ya existe")
 
     return render_template("index.html")
 
